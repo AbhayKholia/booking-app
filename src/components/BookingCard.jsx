@@ -7,6 +7,7 @@ export default function BookingCard({ booking, onCancel }) {
       await onCancel(booking._id);
       toast.success("Booking cancelled!");
     } catch (err) {
+      console.log(err)
       toast.error("Failed to cancel booking");
     }
   };
